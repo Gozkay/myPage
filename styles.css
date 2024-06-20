@@ -9,20 +9,21 @@ body {
 
 .sidebar {
   width: 250px;
-  background-color: #f8f9fa;
-  color: #333333;
+  background-color: #343a40; /* Dark background color */
+  color: #ffffff;
   height: 100vh;
   padding: 20px;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
   position: fixed;
-  padding-top: 40px; /* Add padding to the top */
+  padding-top: 40px;
 }
 
 .sidebar-brand h1 {
-  color: #333333;
+  color: #ffffff;
   font-size: 24px;
   margin: 0;
   font-weight: bold;
+  text-transform: uppercase;
 }
 
 .sidebar-nav {
@@ -36,16 +37,18 @@ body {
 }
 
 .sidebar-nav li a {
-  color: #333333;
+  color: #ffffff;
   text-decoration: none;
   font-size: 18px;
   display: block;
   padding: 10px;
   transition: background 0.3s;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .sidebar-nav li a:hover {
-  background-color: #e9ecef;
+  background-color: #495057;
 }
 
 .content {
@@ -83,6 +86,8 @@ body {
   text-decoration: none;
   font-size: 18px;
   transition: color 0.3s;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .top-navbar .nav li a:hover {
@@ -108,7 +113,7 @@ body {
   border-radius: 8px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   width: 100%;
-  max-width: 1000px; /* Increased max width */
+  max-width: 1000px;
   text-align: center;
   margin: 20px;
 }
@@ -178,4 +183,63 @@ body {
   display: none;
   z-index: 10;
   font-size: 14px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+  }
+
+  .content {
+      margin-left: 0;
+      width: 100%;
+  }
+
+  .top-navbar {
+      left: 0;
+      top: auto;
+  }
+
+  .portfolio-container {
+      padding: 20px 10px;
+  }
+
+  .card {
+      margin: 20px 10px;
+  }
+
+  #skills-list li {
+      width: 100%;
+      margin: 10px 0;
+  }
+
+  .top-navbar .nav {
+      flex-direction: column;
+  }
+
+  .top-navbar .nav li {
+      margin: 5px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+      padding: 20px;
+  }
+
+  .card h1 {
+      font-size: 28px;
+  }
+
+  .card p {
+      font-size: 16px;
+  }
+
+  #github-button {
+      padding: 10px 20px;
+      font-size: 16px;
+  }
 }

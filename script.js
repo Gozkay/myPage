@@ -23,16 +23,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const githubButton = document.getElementById('github-button');
     githubButton.addEventListener('click', function() {
-        window.location.href = 'https://github.com/Gozkay'; // Replace with the actual GitHub URL
+        window.location.href = 'https://github.com/Gozkay'; // Ensure the correct GitHub URL is used
     });
 });
 
-function showTooltip(event, text) {
+function showTooltip(event, skillName) {
     const tooltip = document.getElementById('tooltip');
-    tooltip.textContent = text;
+    tooltip.innerHTML = skillName;
     tooltip.style.display = 'block';
-    tooltip.style.left = `${event.pageX + 10}px`;
-    tooltip.style.top = `${event.pageY + 10}px`;
+    tooltip.style.left = event.pageX + 'px';
+    tooltip.style.top = event.pageY + 'px';
 }
 
 function hideTooltip() {
